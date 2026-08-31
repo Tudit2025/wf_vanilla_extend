@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package name="Vanilla 2025 campaign" description="Campaign description 2025" image="campaign_blue_preview.png" show_in_campaign_menu="1" show_in_campaigns="1" show_in_quick_match_mods="0" quick_match_entry_script="start_local_tester.as" campaign_entry_script="start_campaign.as">
+  
+	<campaign_options faction="1" presets="1" friendly_capacity="1" enemy_capacity="1" friendly_accuracy="1" enemy_accuracy="1" xp_multiplier="1" rp_multiplier="1" allow_activate_server="1" allow_change_settings="1" require_journal_key_to_change_settings="difficulty_change" allow_skinpacks="1">
+
+
+		<preset text="Easy" help="Help:Easy" id="easy" friendly_capacity="1.25" friendly_accuracy="0.95" enemy_capacity="1.0" enemy_accuracy="0.93" xp_multiplier="0.5" rp_multiplier="1.0" player_damage_modifier="0.33" />
+		<preset text="Difficulty:Normal" help="Help:Hard" id="normal" friendly_capacity="1.22" friendly_accuracy="0.95" enemy_capacity="1.0" enemy_accuracy="0.93" xp_multiplier="0.4" rp_multiplier="1.0" player_damage_modifier="0.2" />
+		<preset text="Hard" help="Help:Hard_WW2" id="hard" friendly_capacity="1.20" friendly_accuracy="0.94" enemy_capacity="1.0" enemy_accuracy="0.94" xp_multiplier="0.3" rp_multiplier="1.0" player_damage_modifier="0.0" />
+		<preset text="Veteran" help="Help:Veteran" id="veteran" friendly_capacity="1.10" friendly_accuracy="0.94" enemy_capacity="1.0" enemy_accuracy="0.95" xp_multiplier="0.3" rp_multiplier="1.0" player_damage_modifier="0.0" />
+		<preset text="Presets:Custom" help="Help:Presets:Custom" id="custom" friendly_capacity="1.20" friendly_accuracy="0.94" enemy_capacity="1.0" enemy_accuracy="0.94" xp_multiplier="0.3" rp_multiplier="1.0" player_damage_modifier="0.0" />
+	</campaign_options>
+	<overlay path="media/packages/wf_base" />
+</package>
