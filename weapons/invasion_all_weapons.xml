@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+    <!-- All twelve variant weapons are already registered by wf_base. -->
+    <weapon file="all_weapons.xml" />
+    <!-- Keep the replaced weapons' campaign rank gates for these two exceptions. -->
+    <weapon file="c9a1.weapon">
+        <capacity source="rank" source_value="0.0" value="0" />
+        <capacity source="rank" source_value="0.025" value="1" />
+    </weapon>
+    <weapon file="sr25.weapon">
+        <capacity source="rank" source_value="0.0" value="0" />
+        <!-- Explicitly suppress the earlier wf_base 0.15 unlock as well. -->
+        <capacity source="rank" source_value="0.15" value="0" />
+        <capacity source="rank" source_value="0.2" value="1" />
+    </weapon>
+</weapons>

@@ -15,6 +15,7 @@
 #include "target_manager_map5_2.as"
 #include "false_door.as"
 #include "kill_commander.as"
+#include "secondary_faction_profiles.as"
 
 // ------------------------------------------------------------------------------------------------
 class StageConfiguratorInvasion : StageConfigurator {
@@ -269,6 +270,34 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ createStage() const {
 		Stage@ stage = Stage(m_metagame.getUserSettings());
 		return stage;
+	}
+
+	// Call after m_factions is complete, from the desired setupStage* function:
+	// addSecondaryFactions(stage, array<int> = {1, 2});
+	// IDs are LOCAL stage slots, not indices into getFactionConfigs(). Each
+	// slot selects the fixed profile for its actual faction file.
+	protected void addSecondaryFactions(Stage@ stage, const array<int>@ factionIds) {
+		for (uint i = 0; i < factionIds.size(); ++i) {
+			int id = factionIds[i];
+			if (id < 0 || id >= int(stage.m_factions.size())) {
+				_log("ERROR, addSecondaryFactions: invalid slot " + id + " in " + stage.m_mapInfo.m_id, -1);
+				continue;
+			}
+			bool exists = false;
+			for (uint t = 0; t < stage.m_trackers.size(); ++t) {
+				StageFactionVariant@ variant = cast<StageFactionVariant>(stage.m_trackers[t]);
+				if (variant !is null && variant.getFactionId() == id) exists = true;
+			}
+			if (exists) continue;
+			const FactionConfig@ config = stage.m_factions[id].m_config;
+			string file = (id != 0 && stage.isFinalBattle()) ? config.m_finalBattleFile : config.m_file;
+			FactionVariantProfile@ profile = createSecondaryFactionProfile(file);
+			if (profile is null || profile.m_factionFile != file || !profile.validate()) {
+				_log("ERROR, addSecondaryFactions: no valid secondary profile for " + file + " in " + stage.m_mapInfo.m_id, -1);
+				continue;
+			}
+			stage.addTracker(StageFactionVariant(m_metagame, id, profile));
+		}
 	}
 
 	// --------------------------------------------
@@ -2373,6 +2402,13 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 
 		merge(commands, stage.m_extraCommands);
+
+		// Explicit secondary assets win over common, progression and map toggles
+		// for the SAME keys. All other resources keep their normal behavior.
+		for (uint i = 0; i < stage.m_trackers.size(); ++i) {
+			StageFactionVariant@ variant = cast<StageFactionVariant>(stage.m_trackers[i]);
+			if (variant !is null) variant.appendResourceCommands(commands);
+		}
 
 		return commands;
 	}
