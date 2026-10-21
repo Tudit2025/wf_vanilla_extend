@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vehicle file="bmp3.vehicle" key="secondary_bmp3.vehicle"
+    respawn_time="80" time_to_live_unsteerable="75"
+    existence="unlimited" reserves_spawn_point="0">
+    <tag name="apc" />
+</vehicle>

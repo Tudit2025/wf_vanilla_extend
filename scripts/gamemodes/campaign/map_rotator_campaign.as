@@ -1096,6 +1096,7 @@ class MapRotatorCampaign : MapRotatorInvasion {
 
 	
     void restartMap() {
+		configureSecondaryFactions(m_stages[m_currentStageIndex]);
 		MapRotatorInvasion::restartMap();
 		for(int i=0;i<m_stages[m_currentStageIndex].m_mapEventSwitch.length();i++) 
 		{
@@ -1246,6 +1247,7 @@ class MapRotatorCampaign : MapRotatorInvasion {
 			m_stages[index].setIntelManager(null);
 		}
 
+		configureSecondaryFactions(m_stages[index]);
 		MapRotatorInvasion::startMap(index, beginOnly);
 
 		// apply permanent unlocks
@@ -1287,6 +1289,12 @@ class MapRotatorCampaign : MapRotatorInvasion {
 				m_metagame.getComms().send(command);
 			}
 		}
+	}
+
+	// --------------------------------------------
+	protected void configureSecondaryFactions(Stage@ stage) {
+		StageConfiguratorCampaign@ configurator = cast<StageConfiguratorCampaign>(m_configurator);
+		if (configurator !is null) configurator.configureSecondaryFactions(stage);
 	}
 
 	// --------------------------------------------
@@ -1388,14 +1396,14 @@ class MapRotatorCampaign : MapRotatorInvasion {
 			{
 				array<const XmlElement@> list = subroot.getElementsByTagName("stage");
 				_log("stages: " + list.size(), 1);
-				for (uint i = 0; i < list.size(); ++i) {
+				for (uint i = 0; i < list.size() && i < m_stages.size(); ++i) {
 					const XmlElement@ e = list[i];
 					array<const XmlElement@> list2 = e.getElementsByTagName("faction");
 					_log("factions: " + list2.size(), 1);
 					for (uint j = 0; j < list2.size(); ++j) {
 						const XmlElement@ e2 = list2[j];
 
-						if (m_stages[i].m_factions.size() < j) {
+						if (j < m_stages[i].m_factions.size()) {
 							// assuming here that the participants in a map do not change, yet
 							Faction@ f = m_stages[i].m_factions[j];
 							f.m_ownedBases = array<int>();

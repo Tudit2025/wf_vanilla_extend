@@ -46,7 +46,7 @@
 #include "mrl_manager.as"
 #include "squad_equipment_kit_navy.as"
 #include "offdutyveteran.as"
-#include "advanced_call.as"
+#include "sne_call_warning.as"
 #include "creeping_barrage.as"
 #include "b52_carpet_bombing.as"
 #include "mod_crane.as"
@@ -367,7 +367,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 	/*	addTracker(IceTrade(this)); */
         addTracker(Offdutyveteran(this));
 		addTracker(MrlManager(this));
-		addTracker(AdvancedCall(this));
+		addTracker(SneCallWarning(this));
 		addTracker(CreepingBarrage(this));
 		addTracker(B52BombingRun(this));
 		addTracker(CraneWithMod(this));

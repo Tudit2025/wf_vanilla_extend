@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vehicle file="vn.vehicle" key="secondary_vn.vehicle"
+    respawn_time="80" time_to_live_unsteerable="75">
+    <tag name="apc" />
+</vehicle>

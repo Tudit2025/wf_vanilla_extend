@@ -60,6 +60,45 @@ class StageConfiguratorCampaign : StageConfiguratorInvasion {
 	}
 
 	// ------------------------------------------------------------------------------------------------
+	// Rebuild just before starting a map: loading a save restores faction files
+	// AFTER setup(), and final-battle allocation can also change a stage's config.
+	void configureSecondaryFactions(Stage@ stage) {
+		for (int i = int(stage.m_trackers.size()) - 1; i >= 0; --i) {
+			if (cast<StageFactionVariant>(stage.m_trackers[i]) !is null) {
+				stage.m_trackers.removeAt(i);
+			}
+		}
+		// Peaceful maps, including completed stages, have only the player faction.
+		if (stage.m_factions.size() <= 1) return;
+
+		string mapId = stage.m_mapInfo.m_id;
+		array<int> configIndices;
+		// Fixed campaign roles, NOT local faction slots or faction colors.
+		// Player: 6/13 combat appearances; main enemies: 3/5 + 2/4 + 2/5 = 7/14.
+		if (mapId == "map14" || mapId == "map16" || mapId == "map13" ||
+			mapId == "map17" || mapId == "map13_2" || mapId == "map5_2") {
+			configIndices.insertLast(0);
+		}
+		if (mapId == "map15" || mapId == "map16" || mapId == "map8_2") {
+			configIndices.insertLast(1);
+		}
+		if (mapId == "map21" || mapId == "map23") {
+			configIndices.insertLast(2);
+		}
+		if (mapId == "map18" || mapId == "map22") {
+			configIndices.insertLast(3);
+		}
+
+		array<int> factionIds;
+		for (uint i = 0; i < stage.m_factions.size(); ++i) {
+			if (configIndices.find(stage.m_factions[i].m_config.m_index) >= 0) {
+				factionIds.insertLast(int(i));
+			}
+		}
+		addSecondaryFactions(stage, factionIds);
+	}
+
+	// ------------------------------------------------------------------------------------------------
     protected void addStage(Stage@ stage) {
         stage.m_includeLayers.insertLast("layer.campaign2");
 
@@ -1463,8 +1502,8 @@ class StageConfiguratorCampaign : StageConfiguratorInvasion {
 	// --------------------------------------------
 	protected void setupStartingMaps() {
 		m_mapRotatorCampaign.delcareDoneMap("map8");
-		//m_mapRotatorCampaign.addStartingMap("map15");	//TEST: restore this and remove map22 below when the commander/Emrlc trials are done
-		m_mapRotatorCampaign.addStartingMap("map22");
+		m_mapRotatorCampaign.addStartingMap("map15");	//TEST: restore this and remove map22 below when the commander/Emrlc trials are done
+		//m_mapRotatorCampaign.addStartingMap("map22");
 		// map4 no longer an option as a starting map
 		//m_mapRotatorCampaign.addStartingMap("map4");
 

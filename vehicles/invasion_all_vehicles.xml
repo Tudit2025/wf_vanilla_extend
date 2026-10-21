@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vehicles>
+    <vehicle file="all_vehicles.xml" />
+    <!-- Separate keys keep spawn tags out of unmodified faction pools. -->
+    <vehicle file="secondary_acv.vehicle" />
+    <vehicle file="secondary_vn.vehicle" />
+    <vehicle file="secondary_bmp3.vehicle" />
+    <vehicle file="secondary_leclerc.vehicle" />
+    <vehicle file="secondary_leclerc_alt.vehicle" />
+    <vehicle file="secondary_leclerc_denied_player.vehicle" />
+</vehicles>

@@ -17,9 +17,12 @@ class FactionVariantWeaponSwap {
 }
 
 // A tag describes a base spawn slot. Commands still address resource keys;
-// list ALL original candidates for that slot, including inherited resources.
+// cover all original candidates across the profile, including overlapping tags.
 class FactionVariantVehicleSwap {
 	string m_tag;
+	// Additional spawn tags for the initial-instance pass only. This lets a
+	// multi-tag vehicle be replaced at either node without duplicate key toggles.
+	array<string> m_extraSpawnTags;
 	array<string> m_oldKeys;
 	string m_newKey;
 
@@ -77,6 +80,7 @@ class FactionVariantProfile {
 			const FactionVariantVehicleSwap@ swap = m_vehicleSwaps[i];
 			if (swap is null || swap.m_tag == "" || swap.m_newKey == "" || swap.m_oldKeys.size() == 0) return false;
 			if (tags.find(swap.m_tag) >= 0 || !validKeys(swap.m_oldKeys)) return false;
+			if (!validKeys(swap.m_extraSpawnTags) || swap.m_extraSpawnTags.find(swap.m_tag) >= 0) return false;
 			tags.insertLast(swap.m_tag);
 			newKeys.insertLast(swap.m_newKey);
 			for (uint j = 0; j < swap.m_oldKeys.size(); ++j) {
@@ -233,6 +237,10 @@ class StageFactionVariant : Tracker {
 		for (uint i = 0; i < m_profile.m_vehicleSwaps.size(); ++i) {
 			const FactionVariantVehicleSwap@ swap = m_profile.m_vehicleSwaps[i];
 			array<const XmlElement@> nodes = getGenericNodes(m_metagame, "", swap.m_tag);
+			for (uint t = 0; t < swap.m_extraSpawnTags.size(); ++t) {
+				array<const XmlElement@> extraNodes = getGenericNodes(m_metagame, "", swap.m_extraSpawnTags[t]);
+				for (uint n = 0; n < extraNodes.size(); ++n) nodes.insertLast(extraNodes[n]);
+			}
 			for (uint k = 0; k < swap.m_oldKeys.size(); ++k) {
 				array<const XmlElement@> vehicles = getVehicles(m_metagame, m_factionId, swap.m_oldKeys[k]);
 				for (uint v = 0; v < vehicles.size(); ++v) {
