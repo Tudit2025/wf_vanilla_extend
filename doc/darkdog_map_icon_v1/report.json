@@ -1,0 +1,37 @@
+{
+  "status": "offline artwork validation; in-game verification pending",
+  "integration_report": "../darkdog_map_icon_integration.json",
+  "generator": "built-in image_gen, transparent_background=true",
+  "prompt": "prompt.txt",
+  "refinement_prompt": "refinement_prompt.txt",
+  "refinement_input": "darkdog_map_icon_initial.png",
+  "camera_reference": "camera.json",
+  "render_script": "render_camera.py",
+  "reference_images": [
+    "darkdog_perspective_reference.png",
+    "../../../wf_campaign/doc/landship_map_icon_v2/landship_map_icon_v2.png"
+  ],
+  "source_size": [
+    1254,
+    1254
+  ],
+  "source_sha256": "78c1cbfb71cc61310bf4c25463b21c0bd1777838cd648c6308eeded14bf67ece",
+  "preview_sizes": [
+    512,
+    128,
+    64
+  ],
+  "standalone_icon": "../../textures/mapview_darkdog.png",
+  "alpha_preserved": true,
+  "transparent_pixel_count": 849762,
+  "alpha_240_to_255_pixel_count": 710673,
+  "game_icon_alpha_bbox": [
+    9,
+    20,
+    119,
+    113
+  ],
+  "reference_model_and_configuration_hashes_unchanged": true,
+  "reference_inputs_changed_since_render": [],
+  "notes": "Camera parameters describe the Blender render. The final icon is a generated style transfer, not a pixel-exact projection. Resampling preserves generated alpha with the same 88-percent fit as Landship v2."
+}

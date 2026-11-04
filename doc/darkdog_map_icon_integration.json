@@ -1,0 +1,38 @@
+{
+  "status": "installed in wf_vanilla_extend assets; static validation passed; in-game verification pending",
+  "vehicle": "vehicles/darkdog.vehicle",
+  "map_view_atlas_index": 82,
+  "atlas_grid": [
+    10,
+    10
+  ],
+  "cell_size": [
+    128,
+    128
+  ],
+  "cell_pixel_box": [
+    256,
+    1024,
+    384,
+    1152
+  ],
+  "standalone_icon": "textures/mapview_darkdog.png",
+  "artwork_source": "doc/darkdog_map_icon_v1/darkdog_map_icon_v1_128.png",
+  "base_atlas": "../wf_base/textures/mapview_vehicle.png",
+  "campaign_atlas": "textures/mapview_vehicle.png",
+  "resolved_hud": "D:\\PLAY\\Steam\\steamapps\\common\\RunningWithRifles\\media\\packages\\wf_base\\hud.xml",
+  "base_sha256": "2c25e3357947737ab821fc8b22a760541bf183297712229de013e0efa8559be7",
+  "icon_sha256": "80b9fafb8e57b51423168eb324f48f670d3ee39c9e98fb4d6b5cd48a67718498",
+  "campaign_atlas_sha256": "bbc58a7045d20f24e7cf2461c43ddfd06fbae03bbbe437cb9788a573f19bcefb",
+  "static_checks": {
+    "vehicle_xml_parsed": true,
+    "vehicle_registered": true,
+    "hud_grid_matches": true,
+    "base_slot_transparent": true,
+    "slot_used_only_by_darkdog": true,
+    "inserted_cell_rgba_matches_icon": true,
+    "other_99_cells_rgba_unchanged": true
+  },
+  "rebuild": "python -B tools/prepare_darkdog_map_icon.py",
+  "in_game": "pending: restart the game, spawn /darkdog, check map/hover icon and other vehicles"
+}

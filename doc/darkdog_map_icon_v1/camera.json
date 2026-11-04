@@ -1,0 +1,51 @@
+{
+  "status": "offline render from game assets; camera changed only",
+  "camera_type": "perspective, rectilinear",
+  "horizontal_fov_degrees": 69.99999967119774,
+  "vertical_fov_degrees": 70.0,
+  "lens_mm_36mm_sensor": 25.7066650390625,
+  "azimuth_degrees_from_front": 18,
+  "elevation_degrees": 24,
+  "distance_to_target_game_units": 7.354893621297553,
+  "location_blender": [
+    2.076296091079712,
+    -6.967116355895996,
+    4.846475601196289
+  ],
+  "target_blender": [
+    1.6689300537109375e-06,
+    -0.5769388675689697,
+    1.854970932006836
+  ],
+  "shift": [
+    -0.17430900037288666,
+    -0.06687801331281662
+  ],
+  "projected_frame_bounds": [
+    [
+      0.06999994814395905,
+      0.9300000667572021
+    ],
+    [
+      0.17857837677001953,
+      0.8214212656021118
+    ]
+  ],
+  "depth_range": [
+    2.0613566918838764,
+    12.239983301850035
+  ],
+  "source_hashes": {
+    "D:\\PLAY\\Steam\\steamapps\\common\\RunningWithRifles\\media\\packages\\wf_vanilla_extend\\vehicles\\darkdog.vehicle": "61243d58614ea353cac1261caecd66991406b7344d39ed41fb83654771b5db45",
+    "D:\\PLAY\\Steam\\steamapps\\common\\RunningWithRifles\\media\\packages\\wf_vanilla_extend\\textures\\darkdog_wf_v2.png": "4c9835aa5881c9547fd65924621ab6937bfd46e20f9f068410e66c2346aaa299",
+    "D:\\PLAY\\Steam\\steamapps\\common\\RunningWithRifles\\media\\packages\\wf_vanilla_extend\\models\\darkdog_body.mesh": "f23ef9df0ca52e56660c30ce06558f684b0ea7ffd6b6cfce263ac25bdf8256ab",
+    "D:\\PLAY\\Steam\\steamapps\\common\\RunningWithRifles\\media\\packages\\wf_vanilla_extend\\models\\darkdog_turret1.mesh": "345e4e3edca77932eecfd3d799b7901de754a4e8f673a27c437014d35c19c148",
+    "D:\\PLAY\\Steam\\steamapps\\common\\RunningWithRifles\\media\\packages\\wf_vanilla_extend\\models\\darkdog_turret2.mesh": "c9952ff2a538cfbc67007a85ddf0bb8de6d573f8affcd437824a4421e57aa1d2",
+    "D:\\PLAY\\Steam\\steamapps\\common\\RunningWithRifles\\media\\packages\\vanilla\\textures\\aav7_track.png": "4d0f7f8c836a409cac7876bad02d454e38f64a2ccd719a2616a86a1b619934f2",
+    "D:\\PLAY\\Steam\\steamapps\\common\\RunningWithRifles\\media\\packages\\wf_vanilla_extend\\models\\darkdog_track_left.mesh": "4d9aa84352c13557667bd2060462c5d1ae12ea4bf3caa28c1856155b570d9fd9",
+    "D:\\PLAY\\Steam\\steamapps\\common\\RunningWithRifles\\media\\packages\\wf_vanilla_extend\\models\\darkdog_track_right.mesh": "03e0ed2158b5f19c9558c3e375909d214cd6f5cfe04471aa9388a390ec1f4be5",
+    "D:\\PLAY\\Steam\\steamapps\\common\\RunningWithRifles\\media\\packages\\vanilla\\textures\\aav7_wheel.png": "b36d083ab4553ffbf2457fa190ceb880c43b15a38f8dee4f2c5e838f199ba160",
+    "D:\\PLAY\\Steam\\steamapps\\common\\RunningWithRifles\\media\\packages\\wf_vanilla_extend\\models\\darkdog_wheel_left.mesh": "38618a03b1b402303a4fc9a3a4520a301645cbce0b9cbdaac3b3368b26c18de4",
+    "D:\\PLAY\\Steam\\steamapps\\common\\RunningWithRifles\\media\\packages\\wf_vanilla_extend\\models\\darkdog_wheel_right.mesh": "507c123ab9cf9931fd46d7ebdb52a2969f0f46533cdcd9bf6c4be4028e464fc4"
+  }
+}

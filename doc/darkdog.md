@@ -2,6 +2,18 @@
 
 本包 `wf_vanilla_extend` 已注册 `darkdog.vehicle`。重启 RWR、进入本包战役，在聊天框输入 `/darkdog`，在输入者附近生成同阵营 Darkdog。载具设为阵营专用，可由同阵营 AI 使用。当前为指令生成，未设置普通阵营刷车或支援呼叫。
 
+## 地图预览图
+
+Darkdog 使用专属黑白透明图标，`map_view_atlas_index="82"`。游戏资产为 [128×128 RGBA 图标](../textures/mapview_darkdog.png)；本包 [mapview_vehicle.png](../textures/mapview_vehicle.png) 覆盖 `wf_base` 同名图集，将图标放入 10×10 图集的第 9 行第 3 列（零基索引 82）。其余 99 格 RGBA 像素与基础图集一致。
+
+沿用 Landship 最终版流程：从当前 `.vehicle` / `.mesh` 装配渲染透视底稿，采用 70° FOV、相对车头侧偏 18°、俯角 24°，再用内置 imagegen 转为黑白线稿。相机距离按 Darkdog 尺寸自动拟合，保留长主炮、并列 20 mm 炮、两侧导弹舱与后炮塔的可见轮廓。生成图经局部修正去掉多余短炮管，再按 Landship 的 88% 画布适配方式缩放，保留透明通道。
+
+![Darkdog 黑白地图预览图](darkdog_map_icon_v1/darkdog_map_icon_v1_512.png)
+
+[浅色／深色背景与 128／64 像素预览](darkdog_map_icon_v1/darkdog_map_icon_v1_preview.png)、[模型底稿](darkdog_map_icon_v1/darkdog_perspective_reference.png)、[相机参数](darkdog_map_icon_v1/camera.json)、[生成提示词](darkdog_map_icon_v1/prompt.txt)、[局部修正提示词](darkdog_map_icon_v1/refinement_prompt.txt)均保留。生成图是风格化结果，不等同于逐像素模型渲染。
+
+[接入检查记录](darkdog_map_icon_integration.json)包含图集索引、资源哈希及像素校验。静态检查覆盖载具注册、索引冲突、HUD 网格大小、透明通道、写入格一致性及其他 99 格不变。游戏内显示待验证：重启 RWR 后用 `/darkdog` 生成，检查地图及悬停预览，并观察其他载具图标。
+
 ## 炮塔与乘员
 
 两座可见炮塔的**总射界均为 140°，即中线左右各 70°**。1 号中线朝车头，2 号中线朝车尾。六个武器位置全部取当前 Blender 工程的空物体，炮管和发射器保持源模型的刚性装配。
@@ -83,6 +95,15 @@ vanilla DarkCat 的前进 / 加速度 / 倒车为 10 / 12 / 8；`tank2.vehicle` 
 4. 低血量操控、损毁粒子、同阵营使用限制。
 
 ## 重建
+
+地图图标重建（需 Python 和 Pillow）：
+
+```powershell
+python -B doc/darkdog_map_icon_v1/make_previews.py
+python -B tools/prepare_darkdog_map_icon.py
+```
+
+以上命令从保存的生成图重建尺寸变体、独立图标与图集；如需更新模型透视底稿，用 Blender 运行 `doc/darkdog_map_icon_v1/render_camera.py`，再按保存的提示词重新生成图标。
 
 以下脚本仅写本包，读取源模型与本机既有转换器。导出会更新网格和导出报告；调整源模型的支点或空物体后，需要同步更新 `.vehicle`，验证脚本会检查两者一致性。
 

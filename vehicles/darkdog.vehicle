@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vehicle file="vehicle_base.vehicle" name="Darkdog" key="darkdog.vehicle"
-    respawn_time="36000" time_to_live_unsteerable="95" map_view_atlas_index="60"
+    respawn_time="36000" time_to_live_unsteerable="95" map_view_atlas_index="82"
     minimum_fill_requirement="0.0" max_character_collision_speed_on_normal="8.0"
     owner="faction" allow_owner_to_use_only="1" allow_ai_to_use="1">
     <tag name="metal_heavy" />

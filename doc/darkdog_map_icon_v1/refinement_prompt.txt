@@ -1,0 +1,7 @@
+Use case: precise-object-edit
+Asset type: final correction to a transparent Running with Rifles Darkdog map icon.
+Image 1 is the EDIT TARGET, the already generated black-and-white Darkdog icon. Image 2 is ONLY the original model geometry reference.
+Make ONE local correction to image 1: remove the EXTRA small short gun protruding from directly below the forward turret on the right of the main barrel root. In the 1280x1280 image this unwanted stub is approximately x=635..712, y=568..647, its small square muzzle around (650,630). Replace just this extra stub with the uninterrupted solid black recess/shadow behind it, as seen in the corresponding region of model reference image 2.
+Preserve the real 20 mm barrel that runs closely beside the main gun and ends much farther forward/lower-left around (380,828). Keep this true secondary barrel and the long main gun exactly unchanged. The edit must leave ONE long main cannon and ONE thinner adjacent shorter cannon, not two secondary barrels.
+Everything else in image 1 is locked: exact image size, perspective, silhouette, framing, all four circular missile pod faces, armor panel lines, nose, rear turret, white opaque surfaces, black outlines, and transparent exterior alpha. Do not redraw, move, enlarge, remove, add or recolor any other feature.
+Output the corrected single icon only, with genuine transparent alpha outside the vehicle and opaque white armor. No text, ground or shadow beyond the silhouette.
