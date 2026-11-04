@@ -1,0 +1,313 @@
+{
+  "passed": true,
+  "source_sha256": "390ab793fbf1a109eb3ab17f9b574effb7e1720e94e844f7691c0e3e5f136123",
+  "source_unchanged": true,
+  "weapons": [
+    "darkdog_20mm.weapon",
+    "darkdog_cannon.weapon",
+    "darkdog_hive.weapon",
+    "darkdog_minigun.weapon",
+    "darkdog_missile.weapon"
+  ],
+  "muzzles": [
+    {
+      "index": 0,
+      "marker": "maincannon",
+      "source_position_error": 6.307770175719725e-07,
+      "rigidity_error": 5.331201499700045e-07
+    },
+    {
+      "index": 1,
+      "marker": "minigun",
+      "source_position_error": 1.1366279326363478e-06,
+      "rigidity_error": 5.274100790559843e-07
+    },
+    {
+      "index": 2,
+      "marker": "20mm",
+      "source_position_error": 4.995779578161303e-07,
+      "rigidity_error": 4.1295309247228556e-07
+    },
+    {
+      "index": 3,
+      "marker": "missile",
+      "source_position_error": 7.251217997429632e-07,
+      "rigidity_error": 7.725644944200349e-07
+    },
+    {
+      "index": 4,
+      "marker": "missile.001",
+      "source_position_error": 7.251217997429632e-07,
+      "rigidity_error": 7.152557373046875e-07
+    },
+    {
+      "index": 5,
+      "marker": "hive",
+      "source_position_error": 4.915124923727108e-07,
+      "rigidity_error": 5.462855929083633e-07
+    }
+  ],
+  "assembly_errors": {
+    "darkdog_body.mesh": 0.0,
+    "darkdog_turret1.mesh": 6.419616707723741e-07,
+    "darkdog_turret2.mesh": 1.230316248683215e-06,
+    "darkdog_track_left.mesh": 0.0,
+    "darkdog_track_right.mesh": 0.0,
+    "darkdog_wheel_left.mesh": 0.0,
+    "darkdog_wheel_right.mesh": 0.0
+  },
+  "resolved_resources": {
+    "vehicles/vehicle_base.vehicle": "vanilla\\vehicles\\vehicle_base.vehicle",
+    "models/darkdog_body.mesh": "wf_vanilla_extend\\models\\darkdog_body.mesh",
+    "textures/darkdog_wf_v2.png": "wf_vanilla_extend\\textures\\darkdog_wf_v2.png",
+    "models/darkdog_turret1.mesh": "wf_vanilla_extend\\models\\darkdog_turret1.mesh",
+    "models/darkdog_turret2.mesh": "wf_vanilla_extend\\models\\darkdog_turret2.mesh",
+    "models/darkdog_track_left.mesh": "wf_vanilla_extend\\models\\darkdog_track_left.mesh",
+    "textures/aav7_track.png": "vanilla\\textures\\aav7_track.png",
+    "models/darkdog_track_right.mesh": "wf_vanilla_extend\\models\\darkdog_track_right.mesh",
+    "models/darkdog_wheel_left.mesh": "wf_vanilla_extend\\models\\darkdog_wheel_left.mesh",
+    "textures/aav7_wheel.png": "vanilla\\textures\\aav7_wheel.png",
+    "models/darkdog_wheel_right.mesh": "wf_vanilla_extend\\models\\darkdog_wheel_right.mesh",
+    "sounds/tank_rev0.wav": "vanilla\\sounds\\tank_rev0.wav",
+    "sounds/tank_rev0_b.wav": "vanilla\\sounds\\tank_rev0_b.wav",
+    "sounds/tank_rev1.wav": "vanilla\\sounds\\tank_rev1.wav",
+    "sounds/tank_tracks.wav": "vanilla\\sounds\\tank_tracks.wav",
+    "sounds/tank_rev2.wav": "vanilla\\sounds\\tank_rev2.wav",
+    "sounds/tire_squeal.wav": "vanilla\\sounds\\tire_squeal.wav",
+    "sounds/jeep2_ignition.wav": "vanilla\\sounds\\jeep2_ignition.wav",
+    "sounds/car_hit1.wav": "vanilla\\sounds\\car_hit1.wav",
+    "sounds/car_hit2.wav": "vanilla\\sounds\\car_hit2.wav",
+    "sounds/vehicle_explosion_1.wav": "vanilla\\sounds\\vehicle_explosion_1.wav",
+    "sounds/turret_rotation1.wav": "vanilla\\sounds\\turret_rotation1.wav",
+    "sounds/turret_rotation2.wav": "vanilla\\sounds\\turret_rotation2.wav",
+    "weapons/darkdog_cannon.weapon": "wf_vanilla_extend\\weapons\\darkdog_cannon.weapon",
+    "textures/hud_tank_cannon.png": "vanilla\\textures\\hud_tank_cannon.png",
+    "weapons/tank_cannon_3.projectile": "wf_base\\weapons\\tank_cannon_3.projectile",
+    "models/mortar_shell.xml": "vanilla\\models\\mortar_shell.xml",
+    "sounds/explosion1.wav": "vanilla\\sounds\\explosion1.wav",
+    "sounds/explosion2.wav": "vanilla\\sounds\\explosion2.wav",
+    "sounds/blast_metal_hit_01.wav": "vanilla\\sounds\\blast_metal_hit_01.wav",
+    "sounds/blast_metal_hit_02.wav": "vanilla\\sounds\\blast_metal_hit_02.wav",
+    "sounds/blast_metal_hit_03.wav": "vanilla\\sounds\\blast_metal_hit_03.wav",
+    "sounds/tank_shot_3.wav": "wf_base\\sounds\\tank_shot_3.wav",
+    "weapons/darkdog_minigun.weapon": "wf_vanilla_extend\\weapons\\darkdog_minigun.weapon",
+    "textures/hud_minigun.png": "vanilla\\textures\\hud_minigun.png",
+    "weapons/vulcan.projectile": "wf_base\\weapons\\vulcan.projectile",
+    "models/40mm.mesh": "vanilla\\models\\40mm.mesh",
+    "textures/40mm.png": "vanilla\\textures\\40mm.png",
+    "sounds/ricochet_b1.wav": "vanilla\\sounds\\ricochet_b1.wav",
+    "sounds/minigun_shot.wav": "vanilla\\sounds\\minigun_shot.wav",
+    "sounds/overheating_mg.wav": "vanilla\\sounds\\overheating_mg.wav",
+    "weapons/darkdog_20mm.weapon": "wf_vanilla_extend\\weapons\\darkdog_20mm.weapon",
+    "textures/hud_apc.png": "vanilla\\textures\\hud_apc.png",
+    "sounds/apc_shot.wav": "vanilla\\sounds\\apc_shot.wav",
+    "weapons/apc_hmg.projectile": "vanilla\\weapons\\apc_hmg.projectile",
+    "weapons/darkdog_missile.weapon": "wf_vanilla_extend\\weapons\\darkdog_missile.weapon",
+    "textures/hud_vfs_at.png": "vanilla\\textures\\hud_vfs_at.png",
+    "sounds/lai-109_missile.wav": "vanilla\\sounds\\lai-109_missile.wav",
+    "weapons/bmp3_missile.projectile": "wf_base\\weapons\\bmp3_missile.projectile",
+    "models/javmissile.xml": "vanilla\\models\\javmissile.xml",
+    "weapons/darkdog_hive.weapon": "wf_vanilla_extend\\weapons\\darkdog_hive.weapon",
+    "textures/hud_patrol_ship_mortar.png": "vanilla\\textures\\hud_patrol_ship_mortar.png",
+    "sounds/patrol_ship_mortar.wav": "vanilla\\sounds\\patrol_ship_mortar.wav",
+    "weapons/rocket2.projectile": "vanilla\\weapons\\rocket2.projectile"
+  },
+  "xml_files_checked": 14,
+  "previews": [
+    "darkdog_arcs.png",
+    "darkdog_assembled.png",
+    "darkdog_rear.png"
+  ],
+  "vehicle_tuning": {
+    "control": {
+      "max_speed": "16.0",
+      "acceleration": "15.0",
+      "max_reverse_speed": "10.0",
+      "min_health_to_steer": "0.0",
+      "max_rotation": "0.0",
+      "max_water_depth": "1.6",
+      "steer_smoothening": "0.98",
+      "tracked": "1",
+      "gears": "1",
+      "max_limiter_speed": "6.0",
+      "simulated_speed_factor": "0.5"
+    },
+    "physics": {
+      "max_health": "40.0",
+      "blast_damage_threshold": "0.17",
+      "mass": "1200.0",
+      "broken_mass": "10",
+      "remove_collision_threshold": "0.2",
+      "extent": "3.8 0.0 6.8",
+      "offset": "0 0 -0.18",
+      "top_offset": "0 2.0 0",
+      "collision_model_pos": "0 1.143257 0.098557",
+      "collision_model_extent": "4.816670 2.418247 9.018196",
+      "visual_offset": "0 0.6 0"
+    },
+    "tire_sets": [
+      {
+        "offset": "1.75 0.0 3.0",
+        "radius": "0.63"
+      },
+      {
+        "offset": "1.75 0.0 -0.18",
+        "radius": "0.63"
+      },
+      {
+        "offset": "1.75 0.0 -3.36",
+        "radius": "0.63"
+      }
+    ]
+  },
+  "weapon_tuning": {
+    "darkdog_20mm.weapon": {
+      "specification": {
+        "retrigger_time": "0.25",
+        "accuracy_factor": "0.9",
+        "sustained_fire_grow_step": "0.115",
+        "sustained_fire_diminish_rate": "0.2",
+        "sight_range_modifier": "1.0",
+        "ai_sight_range_modifier": "1.15",
+        "magazine_size": "-1",
+        "can_shoot_standing": "0",
+        "can_shoot_crouching": "0",
+        "suppressed": "0",
+        "name": "Darkdog 20 mm",
+        "class": "0",
+        "projectile_speed": "70.0",
+        "slot": "2",
+        "barrel_offset": "0.0",
+        "projectiles_per_shot": "1",
+        "spread_range": "0.35",
+        "cooldown_start": "0.4",
+        "cooldown_end": "0.0",
+        "barrel_offset_3d": "0 0 0"
+      },
+      "projectile": {
+        "file": "apc_hmg.projectile"
+      }
+    },
+    "darkdog_cannon.weapon": {
+      "specification": {
+        "retrigger_time": "2.5",
+        "accuracy_factor": "0.85",
+        "sustained_fire_grow_step": "0.8",
+        "sustained_fire_diminish_rate": "0.8",
+        "sight_range_modifier": "1.2",
+        "ai_sight_range_modifier": "1.15",
+        "magazine_size": "-1",
+        "can_shoot_standing": "0",
+        "can_shoot_crouching": "0",
+        "suppressed": "0",
+        "name": "Darkdog main cannon",
+        "class": "0",
+        "projectile_speed": "80.0",
+        "slot": "2",
+        "barrel_offset": "0.0",
+        "barrel_offset_3d": "0 0 0",
+        "projectiles_per_shot": "1"
+      },
+      "projectile": {
+        "file": "tank_cannon_3.projectile"
+      }
+    },
+    "darkdog_hive.weapon": {
+      "specification": {
+        "retrigger_time": "0.6",
+        "accuracy_factor": "1.0",
+        "spread_range": "0.25",
+        "sustained_fire_grow_step": "0.35",
+        "sustained_fire_diminish_rate": "0.2",
+        "sight_range_modifier": "1.3",
+        "ai_sight_range_modifier": "1.15",
+        "magazine_size": "-1",
+        "can_shoot_standing": "0",
+        "can_shoot_crouching": "0",
+        "suppressed": "0",
+        "name": "Darkdog Hive rocket pod",
+        "class": "0",
+        "projectile_speed": "32.0",
+        "slot": "2",
+        "barrel_offset": "0.0",
+        "barrel_offset_3d": "0 0 0",
+        "projectiles_per_shot": "2",
+        "sight_height_offset": "4.0",
+        "cooldown_start": "0.95",
+        "cooldown_end": "0.0"
+      },
+      "ballistics": {
+        "curve_height": "6.0",
+        "near_far_distance": "1.0",
+        "speed_estimation_near": "16.0",
+        "speed_estimation_far": "28.0",
+        "max_speed": "40.0",
+        "randomness": "0.15"
+      },
+      "projectile": {
+        "file": "rocket2.projectile",
+        "pulldown_in_air": "12.0"
+      }
+    },
+    "darkdog_minigun.weapon": {
+      "specification": {
+        "retrigger_time": "0.04",
+        "accuracy_factor": "1.0",
+        "sustained_fire_grow_step": "0.022",
+        "sustained_fire_diminish_rate": "0.2",
+        "spread_range": "0.2",
+        "sight_range_modifier": "1.1",
+        "ai_sight_range_modifier": "1.15",
+        "magazine_size": "-1",
+        "can_shoot_standing": "0",
+        "can_shoot_crouching": "0",
+        "suppressed": "0",
+        "name": "Darkdog minigun",
+        "class": "0",
+        "projectile_speed": "90.0",
+        "slot": "2",
+        "barrel_offset": "0.0",
+        "sight_height_offset": "1.5",
+        "projectiles_per_shot": "1",
+        "cooldown_start": "0.6",
+        "cooldown_end": "0.3",
+        "barrel_offset_3d": "0 0 0"
+      },
+      "projectile": {
+        "file": "vulcan.projectile"
+      }
+    },
+    "darkdog_missile.weapon": {
+      "specification": {
+        "retrigger_time": "1.6",
+        "accuracy_factor": "0.95",
+        "sustained_fire_grow_step": "0.3",
+        "sustained_fire_diminish_rate": "0.1",
+        "sight_range_modifier": "1.4",
+        "ai_sight_range_modifier": "0.75",
+        "magazine_size": "-1",
+        "can_shoot_standing": "0",
+        "can_shoot_crouching": "0",
+        "suppressed": "0",
+        "name": "Darkdog missiles",
+        "class": "0",
+        "projectile_speed": "28.0",
+        "slot": "2",
+        "barrel_offset": "0.0",
+        "projectiles_per_shot": "1",
+        "sight_height_offset": "2.0",
+        "cooldown_start": "0.0",
+        "cooldown_end": "0.0",
+        "barrel_offset_3d": "0 0 0"
+      },
+      "projectile": {
+        "file": "bmp3_missile.projectile",
+        "pulldown_in_air": "0.4"
+      }
+    }
+  },
+  "not_run": [
+    "RWR runtime and AngelScript compilation",
+    "driving / crew / firing / sound / track animation in game"
+  ]
+}

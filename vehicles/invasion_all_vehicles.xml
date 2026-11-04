@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vehicles>
     <vehicle file="all_vehicles.xml" />
+    <vehicle file="darkdog.vehicle" />
     <!-- Separate keys keep spawn tags out of unmodified faction pools. -->
     <vehicle file="secondary_acv.vehicle" />
     <vehicle file="secondary_vn.vehicle" />

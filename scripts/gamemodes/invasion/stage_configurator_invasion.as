@@ -501,6 +501,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			command.setIntAttribute("faction_id", 1);
 			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
 			addFactionResourceElements(command, "vehicle", array<string> = {"darkcat_0.vehicle"}, false);
+			addFactionResourceElements(command, "vehicle", array<string> = {"darkdog.vehicle"}, true);
 			addFactionResourceElements(command, "vehicle", array<string> = {"mod_1.vehicle"}, false);
 			addFactionResourceElements(command, "vehicle", array<string> = {"mod_2.vehicle"}, false);
 			addFactionResourceElements(command, "vehicle", array<string> = {"mod_3.vehicle"}, false);
@@ -512,6 +513,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			command.setStringAttribute("class", "faction_resources");
 			command.setIntAttribute("faction_id", 0);
 			addFactionResourceElements(command, "vehicle", array<string> = {"darkcat_0.vehicle"}, true);
+			addFactionResourceElements(command, "vehicle", array<string> = {"darkdog.vehicle"}, false);
 			addFactionResourceElements(command, "vehicle", array<string> = {"radio_jammer.vehicle"}, false);
 			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, false);
 			addFactionResourceElements(command, "vehicle", array<string> = {"pika_k1_minig_roadblock.vehicle","deployable_minig.vehicle", "hornet.vehicle", "apc.vehicle", "apc_1.vehicle", "apc_2.vehicle","apc_3.vehicle"}, false);

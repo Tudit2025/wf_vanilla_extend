@@ -17,7 +17,7 @@
 #include "side_base_attack_handler.as"
 
 // generic trackers
-#include "basic_command_handler.as"
+#include "darkdog_command_handler.as"
 #include "autosaver.as"
 #include "prison_break_objective.as"
 #include "unlock_manager.as"
@@ -335,7 +335,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		addTracker(PrisonBreakObjective(this, 0));
 		setupDisableRadioAtMatchOver();
 		addTracker(AutoSaver(this));
-		addTracker(BasicCommandHandler(this));
+		addTracker(DarkdogCommandHandler(this));
         addTracker(SBLTracker(this));
 		
 		setupExperimentalFeatures();

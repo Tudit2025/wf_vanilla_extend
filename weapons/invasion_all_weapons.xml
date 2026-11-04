@@ -2,6 +2,11 @@
 <weapons>
     <!-- All twelve variant weapons are already registered by wf_base. -->
     <weapon file="all_weapons.xml" />
+    <weapon file="darkdog_cannon.weapon" />
+    <weapon file="darkdog_20mm.weapon" />
+    <weapon file="darkdog_missile.weapon" />
+    <weapon file="darkdog_minigun.weapon" />
+    <weapon file="darkdog_hive.weapon" />
     <!-- Keep the replaced weapons' campaign rank gates for these two exceptions. -->
     <weapon file="c9a1.weapon">
         <capacity source="rank" source_value="0.0" value="0" />
